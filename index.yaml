@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  eks-ingress-controller:
+  - apiVersion: v2
+    appVersion: 0.44.0
+    created: "2021-02-23T21:10:35.840470884Z"
+    description: NGINX EKS Ingress Controller for AWS
+    digest: 2dbab0e323a1b4358972dcadd540b3665d843df7cf77c395de9db265fea4cd56
+    name: eks-ingress-controller
+    type: application
+    urls:
+    - https://github.com/unanet/helm-charts/releases/download/eks-ingress-controller-0.1.0/eks-ingress-controller-0.1.0.tgz
+    version: 0.1.0
+generated: "2021-02-23T21:10:35.741096682Z"
