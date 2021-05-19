@@ -3,6 +3,7 @@ apiVersion: policy/v1beta1
 kind: PodSecurityPolicy
 metadata:
   name: {{ include "promtail.fullname" . }}
+  namespace: {{ .Release.Namespace }}
   labels:
     {{- include "promtail.labels" . | nindent 4 }}
 spec:
