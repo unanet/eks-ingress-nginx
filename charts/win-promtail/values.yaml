@@ -6,7 +6,7 @@ fullnameOverride: null
 
 image:
   # -- The Docker registry
-  registry: null
+  registry: docker.io
   # -- Docker image repository
   repository: unanet/win-promtail
   # -- Overrides the image tag whose default is the chart's appVersion
@@ -114,7 +114,7 @@ defaultVolumes:
       path: C:\ProgramData\Docker\containers
   - name: pods
     hostPath:
-      path: /var/log/pods
+      path: C:\var\log\pods
 
 # -- Default volume mounts. Corresponds to `volumes`.
 # @default -- See `values.yaml`
@@ -123,7 +123,7 @@ defaultVolumeMounts:
     mountPath: C:\ProgramData\Docker\containers
     readOnly: true
   - name: pods
-    mountPath: /var/log/pods
+    mountPath: C:\var\log\pods
     readOnly: true
 
 # Extra volumes to be added in addition to those specified under `defaultVolumes`.
@@ -210,7 +210,7 @@ config:
   # @default -- See `values.yaml`
   snippets:
     pipelineStages:
-      - cri: {}
+      - docker: {}
     common:
       - action: replace
         source_labels:
@@ -236,14 +236,14 @@ config:
           - __meta_kubernetes_pod_container_name
         target_label: container
       - action: replace
-        replacement: /var/log/pods/*$1/*.log
+        replacement: C:\var\log\pods\*$1\*.log
         separator: /
         source_labels:
           - __meta_kubernetes_pod_uid
           - __meta_kubernetes_pod_container_name
         target_label: __path__
       - action: replace
-        replacement: /var/log/pods/*$1/*.log
+        replacement: C:\var\log\pods\*$1\*.log
         regex: true/(.*)
         separator: /
         source_labels:
