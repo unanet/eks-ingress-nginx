@@ -102,7 +102,7 @@ tolerations:
     effect: NoSchedule
   - key: os
     operator: Equals
-    affect: NoSchedule
+    effect: NoSchedule
     value: windows
 
 # -- Default volumes that are mounted into pods. In most cases, these should not be changed.
