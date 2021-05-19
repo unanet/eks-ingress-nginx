@@ -11,4 +11,15 @@ entries:
     urls:
     - https://github.com/unanet/helm-charts/releases/download/eks-ingress-controller-0.1.0/eks-ingress-controller-0.1.0.tgz
     version: 0.1.0
+  win-promtail:
+  - apiVersion: v2
+    appVersion: 2.2.1
+    created: "2021-05-19T20:38:47.846562271Z"
+    description: Promtail for Windows
+    digest: 77ca00e083639d04afe83ab845c633e11446e4859fb76409bc1faed2c0fe9334
+    name: win-promtail
+    type: application
+    urls:
+    - https://github.com/unanet/helm-charts/releases/download/win-promtail-0.1.0/win-promtail-0.1.0.tgz
+    version: 0.1.0
 generated: "2021-02-23T21:10:35.741096682Z"
