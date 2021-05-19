@@ -51,9 +51,6 @@ spec:
           volumeMounts:
             - name: config
               mountPath: /etc/promtail
-            - name: varlog
-              mountPath: C:\var
-              readOnly: true
             - name: run
               mountPath: /run/promtail
             {{- with .Values.defaultVolumeMounts }}
@@ -111,11 +108,14 @@ spec:
       {{- end }}
       volumes:
         - name: config
-          configMap:
-            name: loki-promtail-win
-        - name: varlog
+          secret:
+            secretName: {{ include "promtail.fullname" . }}
+        - name: run
           hostPath:
-            path: C:\var
-        - name: varlibdockercontainers
-          hostPath:
-            path: C:\ProgramData\Docker\containers
+            path: C:\var\run\promtail
+        {{- with .Values.defaultVolumes }}
+        {{- toYaml . | nindent 8 }}
+        {{- end }}
+        {{- with .Values.extraVolumes }}
+        {{- toYaml . | nindent 8 }}
+        {{- end }}
