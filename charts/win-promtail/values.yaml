@@ -101,7 +101,7 @@ tolerations:
     operator: Exists
     effect: NoSchedule
   - key: os
-    operator: Equals
+    operator: Equal
     effect: NoSchedule
     value: windows
 
