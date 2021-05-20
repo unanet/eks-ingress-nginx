@@ -44,15 +44,15 @@ spec:
           image: "{{ .Values.image.registry }}/{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           args:
-            - "-config.file=/etc/promtail/promtail.yaml"
+            - "-config.file=c:\etc\promtail\promtail.yaml"
             {{- with .Values.extraArgs }}
             {{- toYaml . | nindent 12 }}
             {{- end }}
           volumeMounts:
             - name: config
-              mountPath: /etc/promtail
+              mountPath: C:\etc\promtail
             - name: run
-              mountPath: /run/promtail
+              mountPath: c:\run\promtail
             {{- with .Values.defaultVolumeMounts }}
             {{- toYaml . | nindent 12 }}
             {{- end }}
