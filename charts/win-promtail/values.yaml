@@ -91,6 +91,7 @@ serviceAccount:
 # -- Node selector for pods
 nodeSelector:
   kubernetes.io/os: windows
+  kubernetes.io/arch: amd64
 
 # -- Affinity configuration for pods
 affinity: {}
