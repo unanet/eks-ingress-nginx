@@ -14,6 +14,16 @@ entries:
   win-promtail:
   - apiVersion: v2
     appVersion: 2.2.1
+    created: "2021-05-20T01:50:28.119512787Z"
+    description: Promtail for Windows
+    digest: 8d7f8c36c8c0858254ef714c7e818f136cca3092ed4336249a95e73cd9dbc1d6
+    name: win-promtail
+    type: application
+    urls:
+    - https://github.com/unanet/helm-charts/releases/download/win-promtail-0.1.11/win-promtail-0.1.11.tgz
+    version: 0.1.11
+  - apiVersion: v2
+    appVersion: 2.2.1
     created: "2021-05-19T23:11:24.582046659Z"
     description: Promtail for Windows
     digest: e69f5db74a1c1c530030e396d203a54691c1c1295a0f920bd6e8974f795f3372
@@ -122,4 +132,4 @@ entries:
     urls:
     - https://github.com/unanet/helm-charts/releases/download/win-promtail-0.1.0/win-promtail-0.1.0.tgz
     version: 0.1.0
-generated: "2021-05-19T23:11:24.582386361Z"
+generated: "2021-05-20T01:50:28.119618989Z"
