@@ -113,6 +113,7 @@ spec:
         - name: run
           hostPath:
             path: C:\var\run\promtail
+            type: DirectoryOrCreate
         {{- with .Values.defaultVolumes }}
         {{- toYaml . | nindent 8 }}
         {{- end }}
