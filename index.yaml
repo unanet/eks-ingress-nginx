@@ -13,6 +13,16 @@ entries:
     version: 0.1.0
   win-promtail:
   - apiVersion: v2
+    appVersion: 2.9.1
+    created: "2023-09-26T15:55:37.722385747Z"
+    description: Promtail for Windows K8s
+    digest: 154bc9e1c5ebf822a8f72e0c2202d9ea7e3a5a17082a20f2d779dc72e090938f
+    name: win-promtail
+    type: application
+    urls:
+    - https://github.com/unanet/helm-charts/releases/download/win-promtail-0.2.2/win-promtail-0.2.2.tgz
+    version: 0.2.2
+  - apiVersion: v2
     appVersion: 2.7.5
     created: "2023-03-31T14:44:00.564159547Z"
     description: Promtail for Windows K8s
@@ -202,4 +212,4 @@ entries:
     urls:
     - https://github.com/unanet/helm-charts/releases/download/win-promtail-0.1.0/win-promtail-0.1.0.tgz
     version: 0.1.0
-generated: "2023-03-31T14:44:00.56438315Z"
+generated: "2023-09-26T15:55:37.722795157Z"
